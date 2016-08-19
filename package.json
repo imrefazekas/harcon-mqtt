@@ -1,6 +1,6 @@
 {
   "name": "harcon-mqtt",
-  "version": "0.8.0",
+  "version": "0.8.5",
   "description": "MQTT plugin for the harcon messaging/service bus of node-based enterprise entities.",
   "keywords": [
     "mqtt",
@@ -23,9 +23,9 @@
   "license": "MIT",
   "main": "./lib/Mqtt.js",
   "dependencies": {
-    "harcon": "^4.5.1",
+    "harcon": "^4.5.3",
     "isa.js": "^1.7.5",
-    "mqtt": "^1.13.0"
+    "mqtt": "^1.14.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -37,7 +37,7 @@
     "gulp-util": "^3.0.7",
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
-    "watch": "^0.19.1",
+    "watch": "^0.19.2",
     "winston": "^2.2.0"
   },
   "engines": {
