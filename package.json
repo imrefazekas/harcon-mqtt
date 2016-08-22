@@ -23,7 +23,7 @@
   "license": "MIT",
   "main": "./lib/Mqtt.js",
   "dependencies": {
-    "harcon": "^4.6.0",
+    "harcon": "^4.6.5",
     "isa.js": "^1.7.5",
     "mqtt": "^1.14.0"
   },
