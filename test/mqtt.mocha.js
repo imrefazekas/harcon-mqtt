@@ -10,7 +10,7 @@ let path = require('path')
 let Harcon = require('harcon')
 let Mqtt = require('../lib/Mqtt')
 
-let Logger = require('./WinstonLogger')
+let Logger = require('./PinoLogger')
 
 let Clerobee = require('clerobee')
 let clerobee = new Clerobee(16)
@@ -20,7 +20,7 @@ describe('harcon', function () {
 	let inflicter
 
 	before(function (done) {
-		let logger = Logger.createWinstonLogger( { console: true } )
+		let logger = Logger.createPinoLogger( { level: 'info' } )
 		// let logger = Logger.createWinstonLogger( { file: 'mochatest.log' } )
 
 		// Initializes the Harcon system
