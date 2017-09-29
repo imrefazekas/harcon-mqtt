@@ -1,6 +1,6 @@
 {
   "name": "harcon-mqtt",
-  "version": "3.1.10",
+  "version": "3.3.0",
   "description": "MQTT plugin for the harcon messaging/service bus of node-based enterprise entities.",
   "keywords": [
     "mqtt",
@@ -24,7 +24,7 @@
   "main": "./lib/Mqtt.js",
   "dependencies": {
     "clerobee": "^0.8.6",
-    "harcon": "^8.1.10",
+    "harcon": "^8.3.0",
     "isa.js": "^2.0.0",
     "mqtt": "^2.13.0",
     "proback.js": "^2.1.3"
