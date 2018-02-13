@@ -68,16 +68,16 @@ describe('harcon', function () {
 	describe('Test Harcon system calls', function () {
 		it('Retrieve divisions...', async function () {
 			let divisions = await inflicter.divisions()
-			expect( divisions ).to.eql( [ harconName, harconName + '.click', 'HarconSys.maison.cache' ] )
+			expect( divisions.sort() ).to.eql( [ harconName, harconName + '.click', 'HarconSys.maison.cache' ] )
 		})
 		it('Retrieve entities...', async function () {
 			let entities = await inflicter.entities( )
 			let names = entities.map( function (entity) { return entity.name } ).sort()
-			expect( names ).to.eql( [ 'Alizee', 'Bandit', 'Charlotte', 'Claire', 'Domina', 'Inflicter', 'Julie', 'Lina', 'Margot', 'Marie', 'Marion', 'Mortar', 'peter', 'walter' ] )
+			expect( names ).to.eql( [ 'Alizee', 'Bandit', 'Boss', 'Charlotte', 'Claire', 'Domina', 'Inflicter', 'Julie', 'Lina', 'Margot', 'Marie', 'Marion', 'Mortar', 'peter', 'walter' ] )
 		})
 		it('Send for divisions...', async function () {
 			let res = await inflicter.ignite( clerobee.generate(), null, '', 'Inflicter.divisions')
-			expect( res ).to.eql( [ 'HarconSys', 'HarconSys.click', 'HarconSys.maison.cache' ] )
+			expect( res.sort() ).to.eql( [ 'HarconSys', 'HarconSys.click', 'HarconSys.maison.cache' ] )
 		})
 		it('Clean internals', async function () {
 			let comms = await inflicter.pendingComms( )
@@ -129,10 +129,11 @@ describe('harcon', function () {
 			} catch (err) { expect(err).to.be.an.instanceof( Error ) }
 		})
 	})
+
 	describe('State shifting', function () {
 		it('Simple case', async function () {
 			let Lina = inflicter.barrel.firestarter('Lina').object
-			await inflicter.ignite( clerobee.generate(), null, '', 'Marie.notify', 'data', 'Lina.marieChanged')
+			await inflicter.ignite( clerobee.generate(), null, '', 'Marie.notify', 'data', '', 'Lina.marieChanged')
 
 			await Proback.timeout( 250 )
 			await inflicter.ignite( clerobee.generate(), null, '', 'Marie.simple', 'Bonjour', 'Salut' )
@@ -219,14 +220,6 @@ describe('harcon', function () {
 		it('No answer', async function () {
 			try {
 				await inflicter.ignite( '0', null, '', 'cave.echo')
-			} catch (err) {
-				expect(err).to.be.an.instanceof( Error )
-			}
-		})
-		it('Timeout test', async function () {
-			this.timeout(5000)
-			try {
-				await inflicter.simpleIgnite( 'Alizee.flegme')
 			} catch (err) {
 				expect(err).to.be.an.instanceof( Error )
 			}
