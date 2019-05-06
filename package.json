@@ -1,6 +1,6 @@
 {
   "name": "harcon-mqtt",
-  "version": "4.2.0",
+  "version": "4.2.1",
   "description": "MQTT plugin for the harcon messaging/service bus of node-based enterprise entities.",
   "keywords": [
     "mqtt",
@@ -34,7 +34,7 @@
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
     "pino": "~5",
-    "pino-pretty": "~2",
+    "pino-pretty": "~3",
     "watch": "^1.0.2"
   },
   "engines": {
