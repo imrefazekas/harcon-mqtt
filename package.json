@@ -24,7 +24,7 @@
   "main": "./lib/Mqtt.js",
   "dependencies": {
     "clerobee": "^1.0.1",
-    "harcon": "^9.2.25",
+    "harcon": "^9.2.26",
     "isa.js": "^2.2.12",
     "mqtt": "^3.0.0",
     "proback.js": "^2.1.10"
