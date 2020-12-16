@@ -23,9 +23,9 @@
   "license": "MIT",
   "main": "./lib/Mqtt.js",
   "dependencies": {
-    "clerobee": "^1.0.2",
-    "harcon": "^9.2.47",
-    "isa.js": "^2.2.15",
+    "clerobee": "^1.0.3",
+    "harcon": "^9.2.50",
+    "isa.js": "^2.2.16",
     "mqtt": "^4.2.6",
     "proback.js": "^2.1.16"
   },
