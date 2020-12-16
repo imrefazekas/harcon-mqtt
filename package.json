@@ -1,6 +1,6 @@
 {
   "name": "harcon-mqtt",
-  "version": "4.2.42",
+  "version": "4.2.43",
   "description": "MQTT plugin for the harcon messaging/service bus of node-based enterprise entities.",
   "keywords": [
     "mqtt",
